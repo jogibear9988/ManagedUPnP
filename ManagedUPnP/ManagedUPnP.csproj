@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5956DABC-C1AB-498E-B8C8-F62ED6DCD30C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManagedUPnP</RootNamespace>
+    <AssemblyName>ManagedUPnP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ManagedUPnP.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\ManagedUPnP.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoDiscoveryServices.cs" />
+    <Compile Include="AutoEventedDiscoveryServices.cs" />
+    <Compile Include="CodeGen\ClassScope.cs" />
+    <Compile Include="CodeGen\VBNetCodeGenProvider.cs" />
+    <Compile Include="CodeGen\DeviceExtensions.cs" />
+    <Compile Include="CodeGen\ICodeGenProvider.cs" />
+    <Compile Include="CodeGen\CSharpCodeGenProvider.cs" />
+    <Compile Include="CodeGen\DeviceGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CodeGen\NamespaceDoc.cs" />
+    <Compile Include="CodeGen\ServiceExtensions.cs" />
+    <Compile Include="CodeGen\ServiceGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CodeGen\StringConstants.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Components\DeviceFindOption.cs" />
+    <Compile Include="Components\IEnumerableDelegateExtensions.cs" />
+    <Compile Include="Components\UPnPLogInterceptor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\NamespaceDoc.cs" />
+    <Compile Include="Components\ServiceFindOption.cs" />
+    <Compile Include="Components\UPnPDiscovery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConditionalDefines.cs" />
+    <Compile Include="Descriptions\Attributes\StateVariableDataTypeInfoAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\Attributes\UsesPropertyAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\Cache\RootDescriptionCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\Cache\ServiceDescriptionCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\Description.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\DescriptionDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\DescriptionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\DeviceDescription\DeviceDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\DeviceDescription\DevicesDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\DeviceDescription\DeviceServiceDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\DeviceDescription\DeviceServicesDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\DeviceDescription\IconDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\DeviceDescription\IconsDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\DeviceDescription\RootDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\Extensions\DeviceExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\Extensions\IUPnPDeviceExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\Extensions\IUPnPServiceExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\Extensions\ServiceExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\Extensions\StateVariableDataTypeExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\FormattedDescriptionDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\FormattedDescriptionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\FormattedOrderedDescriptionDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\NamespaceDoc.cs" />
+    <Compile Include="Descriptions\OrderedDescriptionDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\OrderedIndexedDictionary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\ActionDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\ActionsDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\AllowedValueRangeDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\AllowedValuesDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\ArgumentDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\ArgumentDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\ArgumentsDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\ServiceDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\StateVariableDataType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\StateVariableDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\ServiceDescription\StateVariablesDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Descriptions\SharedDescription\SpecVersionDescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events\ServiceAddedEventHandler.cs" />
+    <Compile Include="Events\ServiceAddedEventArgs.cs" />
+    <Compile Include="Events\StateVariableChangedEventArgs.cs" />
+    <Compile Include="Events\StateVariableChangedEventHandler.cs" />
+    <Compile Include="Extensions\IPAddressExtensions.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="ServiceCheckFlags.cs" />
+    <Compile Include="DeviceCheckFlags.cs" />
+    <Compile Include="Devices.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="Discovery.cs" />
+    <Compile Include="Events\DeviceAddedEventArgs.cs" />
+    <Compile Include="Events\DeviceAddedEventHandler.cs" />
+    <Compile Include="Events\DeviceRemovedEventArgs.cs" />
+    <Compile Include="Events\DeviceRemovedEventHandler.cs" />
+    <Compile Include="Events\SearchCompleteEventArgs.cs" />
+    <Compile Include="Events\SearchCompleteEventHandler.cs" />
+    <Compile Include="Events\ServiceInstanceDiedEventArgs.cs" />
+    <Compile Include="Events\ServiceInstanceDiedEventHandler.cs" />
+    <Compile Include="Events\StateVariableChangedEventArgsT.cs" />
+    <Compile Include="Events\StateVariableChangedEventHandlerT.cs" />
+    <Compile Include="Extensions\IUPnPDeviceExtensions.cs" />
+    <Compile Include="Extensions\IUPnPDevicesExtensions.cs" />
+    <Compile Include="Extensions\IUPnPServiceExtensions.cs" />
+    <Compile Include="Extensions\IUPnPServicesExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="HTTPStatus.cs" />
+    <Compile Include="IAutoDiscoveryService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="Services.cs" />
+    <Compile Include="AddressFamilyFlags.cs" />
+    <Compile Include="UPNPLib\IUPnPAddressFamilyControl.cs" />
+    <Compile Include="UPNPLib\IUPnPDeviceFinderAddCallbackWithInterface.cs" />
+    <Compile Include="UPNPLib\IUPnPDeviceFinderCallback.cs" />
+    <Compile Include="UPNPLib\IUPnPServiceCallback.cs" />
+    <Compile Include="UPnPException.cs" />
+    <Compile Include="Utils\Logging.cs" />
+    <Compile Include="Utils\LogLineEventArgs.cs" />
+    <Compile Include="Utils\LogLineEventHandler.cs" />
+    <Compile Include="Utils\USENGConverter.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="WindowsFirewall.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="UPNPLib">
+      <Guid>{DB3442A7-A2E9-4A59-9CB5-F5C1A5D901E5}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
